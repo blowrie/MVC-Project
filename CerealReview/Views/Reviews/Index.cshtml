@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CerealReview.Models.Review>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cereal Reviews</h2>
+
+<p>
+    @Html.ActionLink("Write a Review", "Create")
+</p>
+
+@foreach (var item in Model)
+{
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <div class="caption">
+
+                <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                <p>@Html.DisplayNameFor(model => model.Score) : @Html.DisplayFor(modelItem => item.Score)</p>
+                <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                <p>@Html.ActionLink("Edit", "Edit", new { id = item.CerealID }) | @Html.ActionLink("Details", "Details", new { id = item.CerealID })</p>
+
+            </div>
+        </div>
+    </div>
+    }
+}
+ 
+

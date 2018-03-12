@@ -1,0 +1,22 @@
+﻿@model CerealReview.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="Details">
+   <div class="row">
+        <div class="col-md-12 Middle">
+    <h1 class="Titlemarker">Review Details</h1>
+    <br />
+
+    <p>@Html.DisplayNameFor(model => model.Brand.BrandName) : @Html.DisplayFor(model => model.Brand.BrandName)</p>
+    <p>@Html.DisplayNameFor(model => model.Name) :  @Html.DisplayFor(model => model.Name) </p>
+    <p>@Html.DisplayNameFor(model => model.DateReviewed) :  @Html.DisplayFor(model => model.DateReviewed) </p>
+    <p>@Html.DisplayNameFor(model => model.Score) :  @Html.DisplayFor(model => model.Score) </p>
+    <p>@Html.DisplayNameFor(model => model.Again) :  @Html.DisplayFor(model => model.Again) </p>
+    <p>@Html.DisplayNameFor(model => model.Description) :  @Html.DisplayFor(model => model.Description) </p>
+         </div>
+    </div>
+</div>
+
